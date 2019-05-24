@@ -11,6 +11,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  dockerId: 'azurecontregistry'
+  imageName: 'azuredockerimage' 
+
   
 
 steps:
