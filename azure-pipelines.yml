@@ -19,7 +19,7 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
   docker build -t $(dockerId).azurecr.io/$(imageName) .
-  docker login -u $(dockerId) -p WDqYzVeoS6xHrVhFp9F64EqRfuTvun/0 $(dockerId).azurecr.io
+  docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
   docker push $(dockerId).azurecr.io/$(imageName)
   env:
-    pswd: $(dockerPassword)        # (Not using)Define dockerPassword in the Variables tab of this pipeline in Pipelines page of web interface
+    pswd: WDqYzVeoS6xHrVhFp9F64EqRfuTvun/0        # (Not using)Define dockerPassword in the Variables tab of this pipeline in Pipelines page of web interface
